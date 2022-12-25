@@ -90,12 +90,33 @@ p, a {
 header {
     width: 100%;
     height: 100vh;
-    background-image: url('../img/menu-header.jpg');
+    background-image: url('../img/home-header.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    text-align: center;
 }
-
+header div{
+    background-color: rgba(0, 0, 0, 0.436);
+}
+header h1{
+    color: white;
+    font-size: 6rem;
+}
+header a{
+    padding: 7rem;
+    color: white;
+}
+header nav{
+    margin-top: 2rem;
+}
+.ikons{
+    color: white;
+    font-size: 3rem;
+}
+.ikons i{
+    padding: 3rem;
+}
 /* spacer */
 .spacer {
     width: 100%;
@@ -118,35 +139,114 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: white;
+}
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact div{
+    width: 50%;
+    padding-left: 10%;
+}
+h2{
+    text-align: center;
+}
+.contact h3{
+    font-size: 3.5rem;
+    padding-left: 10%;
+}
+.contact h4{
+    font-size: 2.5rem;
+}
+.contact p{
+    font-size: 1.5rem;
+}
+.tatlılar{
+    margin: 0 auto;
 }
 
 /* footer section */
 footer {
+    background-color: black;
+    color: white;
     width: 100%;
     height: 15vh;
+    font-size: 2rem;
     padding-top: 2.5vh;
-    font-size: 3rem;
 }
+footer nav{
+    text-align: end;
+    padding-bottom: 3rem;
+}
+footer nav a{
+    color: white;
+    font-size: 1.5rem;
+    padding: 0 3rem;
+}
+.copyright{
+    text-align: end;
+}
+footer p{
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    font-style: oblique;
+}
+form{
+    background-color: black;
+}
+.footer-section{
+    display: flex;
+    justify-content: space-around;
+}
+
 
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
-    .header-title {
-        width: 75%;
-        margin: 0 auto;
+    header h1{
+        font-size: 7rem;
         text-align: center;
-        font-size: 4rem;
-    }
-
+      }
+      header nav {
+          display: flex;
+          flex-direction: column;
+      }
+      header nav a{
+        padding: 5%;
+      }
+      .ikons i{
+          padding: 0;
+      }
     /* menu */
     .menu {
         background-image: none;
+        background-color: white;
+        color: black;
     }
-
+    .contact{
+        flex-direction: column;
+        align-items: center;
+    }
     /* footer section */
     footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+    }
+    .footer-section{
+       flex-direction: column;
+    }
+footer nav a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    }
+    footer div{
+        text-align: center;
+    }
+    .copyright{
+        text-align: center;
+        padding-bottom: 2rem;
     }
 }
